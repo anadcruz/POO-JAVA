@@ -1,0 +1,77 @@
+/*2) Use a classe Empresa como base para criar a classe Restaurante. Inclua os atributos
+tipoDeComida, preçoMédio (de um prato), numeroDeMesas e capacidade (de clientes).
+Escreva dois construtores (um construtor sem argumentos e um que receba os dados
+como argumentos), além do toString().*/
+
+public class Restaurante extends Empresa {
+    private String tipoDeComida;
+    private double precoMedio;
+    private int numeroDeMesas;
+    private int capacidade;
+
+    // Construtor sem argumentos
+    public Restaurante() {
+        super(); // Chamando o construtor da classe pai (Empresa) sem argumentos
+    }
+
+    // Construtor com argumentos
+    public Restaurante(String nome, String CGC, String cidade, String estado, String CEP, String telefone,
+                       String tipoDeComida, double precoMedio, int numeroDeMesas, int capacidade) {
+        super(nome, CGC, cidade, estado, CEP, telefone); // Chamando o construtor da classe pai (Empresa) com argumentos
+        this.tipoDeComida = tipoDeComida;
+        this.precoMedio = precoMedio;
+        this.numeroDeMesas = numeroDeMesas;
+        this.capacidade = capacidade;
+    }
+
+    // Métodos de acesso (getters e setters) para os novos atributos
+
+    public String getTipoDeComida() {
+        return tipoDeComida;
+    }
+
+    public void setTipoDeComida(String tipoDeComida) {
+        this.tipoDeComida = tipoDeComida;
+    }
+
+    public double getPrecoMedio() {
+        return precoMedio;
+    }
+
+    public void setPrecoMedio(double precoMedio) {
+        this.precoMedio = precoMedio;
+    }
+
+    public int getNumeroDeMesas() {
+        return numeroDeMesas;
+    }
+
+    public void setNumeroDeMesas(int numeroDeMesas) {
+        this.numeroDeMesas = numeroDeMesas;
+    }
+
+    public int getCapacidade() {
+        return capacidade;
+    }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+
+    // Método toString para imprimir os dados do Restaurante
+    @Override
+    public String toString() {
+        return "Restaurante{" +
+                "nome='" + getNome() + '\'' +
+                ", CGC='" + getCGC() + '\'' +
+                ", cidade='" + getCidade() + '\'' +
+                ", estado='" + getEstado() + '\'' +
+                ", CEP='" + getCEP() + '\'' +
+                ", telefone='" + getTelefone() + '\'' +
+                ", tipoDeComida='" + tipoDeComida + '\'' +
+                ", precoMedio=" + precoMedio +
+                ", numeroDeMesas=" + numeroDeMesas +
+                ", capacidade=" + capacidade +
+                '}';
+    }
+}
