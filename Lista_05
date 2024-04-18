@@ -1,0 +1,90 @@
+//1) Crie uma classe chamada Empresa capaz de armazenar os dados de uma empresa
+(nome, CGC, cidade, estado, CEP e telefone). Inclua um construtor sem argumentos e
+um que receba os dados como argumentos e os inicialize. Escreva o toString() de todas
+as classes.
+
+public class Empresa {
+    private String nome;
+    private String CGC;
+    private String cidade;
+    private String estado;
+    private String CEP;
+    private String telefone;
+
+    // Construtor sem argumentos
+    public Empresa() {
+    }
+
+    // Construtor com argumentos
+    public Empresa(String nome, String CGC, String cidade, String estado, String CEP, String telefone) {
+        this.nome = nome;
+        this.CGC = CGC;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.CEP = CEP;
+        this.telefone = telefone;
+    }
+
+    // Métodos para acesso aos dados (getters e setters)
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCGC() {
+        return CGC;
+    }
+
+    public void setCGC(String CGC) {
+        this.CGC = CGC;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getCEP() {
+        return CEP;
+    }
+
+    public void setCEP(String CEP) {
+        this.CEP = CEP;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    // Método toString para imprimir os dados da Empresa
+    @Override
+    public String toString() {
+        return "Empresa{" +
+                "nome='" + nome + '\'' +
+                ", CGC='" + CGC + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                ", CEP='" + CEP + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
+    }
+}
