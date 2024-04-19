@@ -1,0 +1,62 @@
+/*3) Use a classe Restaurante como base para criar a classe RestauranteAQuilo. Inclua os
+atributos pesoQuilo, adicionais (para incluir bebidas e sobremesas). Escreva dois
+construtores, um com valores default e outros recebendo os atributos, além do
+toString().*/
+
+public class RestauranteAQuilo extends Restaurante {
+    private double pesoQuilo;
+    private String adicionais;
+
+    // Construtor com valores default
+    public RestauranteAQuilo() {
+        super(); // Chama o construtor da classe pai (Restaurante) sem argumentos
+        this.pesoQuilo = 0.0; // Valor default para o peso por quilo
+        this.adicionais = ""; // String vazia como valor default para os adicionais
+    }
+
+    // Construtor com argumentos
+    public RestauranteAQuilo(String nome, String CGC, String cidade, String estado, String CEP, String telefone,
+                             String tipoDeComida, double precoMedio, int numeroDeMesas, int capacidade,
+                             double pesoQuilo, String adicionais) {
+        super(nome, CGC, cidade, estado, CEP, telefone, tipoDeComida, precoMedio, numeroDeMesas, capacidade);
+        this.pesoQuilo = pesoQuilo;
+        this.adicionais = adicionais;
+    }
+
+    // Métodos de acesso (getters e setters) para os novos atributos
+
+    public double getPesoQuilo() {
+        return pesoQuilo;
+    }
+
+    public void setPesoQuilo(double pesoQuilo) {
+        this.pesoQuilo = pesoQuilo;
+    }
+
+    public String getAdicionais() {
+        return adicionais;
+    }
+
+    public void setAdicionais(String adicionais) {
+        this.adicionais = adicionais;
+    }
+
+    // Método toString para imprimir os dados do RestauranteAQuilo
+    @Override
+    public String toString() {
+        return "RestauranteAQuilo{" +
+                "nome='" + getNome() + '\'' +
+                ", CGC='" + getCGC() + '\'' +
+                ", cidade='" + getCidade() + '\'' +
+                ", estado='" + getEstado() + '\'' +
+                ", CEP='" + getCEP() + '\'' +
+                ", telefone='" + getTelefone() + '\'' +
+                ", tipoDeComida='" + getTipoDeComida() + '\'' +
+                ", precoMedio=" + getPrecoMedio() +
+                ", numeroDeMesas=" + getNumeroDeMesas() +
+                ", capacidade=" + getCapacidade() +
+                ", pesoQuilo=" + pesoQuilo +
+                ", adicionais='" + adicionais + '\'' +
+                '}';
+    }
+}
