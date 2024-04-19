@@ -1,0 +1,47 @@
+/*5) Escreva a classe Motor que contém consumo (float) e potencia (int). Inclua um
+construtor sem argumentos que inicialize os dados com zeros e um que inicialize os
+dados com os valores recebidos como argumento. Escreva o toString() da classe.*/
+
+public class Motor {
+    private float consumo;
+    private int potencia;
+
+    // Construtor sem argumentos que inicializa os dados com zeros
+    public Motor() {
+        this.consumo = 0.0f;
+        this.potencia = 0;
+    }
+
+    // Construtor que inicializa os dados com os valores recebidos como argumento
+    public Motor(float consumo, int potencia) {
+        this.consumo = consumo;
+        this.potencia = potencia;
+    }
+
+    // Métodos getters e setters
+
+    public float getConsumo() {
+        return consumo;
+    }
+
+    public void setConsumo(float consumo) {
+        this.consumo = consumo;
+    }
+
+    public int getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(int potencia) {
+        this.potencia = potencia;
+    }
+
+    // Método toString para imprimir os dados do Motor
+    @Override
+    public String toString() {
+        return "Motor{" +
+                "consumo=" + consumo +
+                ", potencia=" + potencia +
+                '}';
+    }
+}
