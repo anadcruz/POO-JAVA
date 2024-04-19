@@ -1,0 +1,23 @@
+/*4) Escreva uma aplicação para testar as classes de (1) a (3)*/
+
+public class TesteClasses {
+
+    public static void main(String[] args) {
+        // Testando a classe Empresa
+        Empresa minhaEmpresa = new Empresa("Minha Empresa", "123456789", "Minha Cidade", "Meu Estado", "12345-678", "1234567890");
+        System.out.println("Dados da Empresa:");
+        System.out.println(minhaEmpresa);
+
+        // Testando a classe Restaurante
+        Restaurante meuRestaurante = new Restaurante("Meu Restaurante", "987654321", "Cidade do Restaurante", "Estado do Restaurante", "54321-876", "9876543210",
+                "Comida Variada", 25.0, 20, 100);
+        System.out.println("\nDados do Restaurante:");
+        System.out.println(meuRestaurante);
+
+        // Testando a classe RestauranteAQuilo
+        RestauranteAQuilo meuRestauranteAQuilo = new RestauranteAQuilo("Meu Restaurante a Quilo", "123456789", "Cidade do Restaurante a Quilo", "Estado do Restaurante a Quilo", "12345-678", "1234567890",
+                "Comida por Quilo", 30.0, 15, 80, 2.5, "Bebidas e sobremesas disponíveis");
+        System.out.println("\nDados do Restaurante a Quilo:");
+        System.out.println(meuRestauranteAQuilo);
+    }
+}
